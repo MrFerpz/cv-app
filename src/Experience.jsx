@@ -5,7 +5,7 @@ export default function Experience() {
         <section className ="experience-section">
             <div className="container">
                 <h1>Experience</h1>
-                <label label = "Job"></label>
+                <label label = "Job">Job</label><br></br>
                 <input></input>
             </div>
         </section>

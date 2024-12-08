@@ -5,7 +5,7 @@ export default function Education() {
         <section className ="education-section">
             <div className="container">
                 <h1>Education</h1>
-                <label label = "Degree"></label>
+                <label label = "Degree">Degree</label><br></br>
                 <input></input>
             </div>
         </section>
