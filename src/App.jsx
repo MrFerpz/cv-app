@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import './BasicInfo.jsx'
-import './Education.jsx'
-import './Experience.jsx'
-import './CVApp.jsx'
+import BasicInfo from './BasicInfo.jsx'
+import Education from './Education.jsx'
+import Experience from'./Experience.jsx'
+import CVApp from './CVApp.jsx'
 
 function App() {
 
   return (
-    <div>
+    <div className="grid-container">
     <BasicInfo/>
     <Education/>
     <Experience/>
