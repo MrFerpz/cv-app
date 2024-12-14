@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import BasicInfo from './BasicInfo.jsx'
-import Education from './Education.jsx'
-import Experience from'./Experience.jsx'
-import CVApp from './CVApp.jsx'
+import BasicInfo from './components/sections/BasicInfo.jsx'
+import Education from './components/sections/Education.jsx'
+import Experience from'./components/sections/Experience.jsx'
+import CVApp from './components/sections/CVApp.jsx'
 
 function App() {
   const [person, setPerson] = useState(
