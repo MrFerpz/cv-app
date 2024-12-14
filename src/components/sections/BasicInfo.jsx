@@ -1,32 +1,28 @@
 import { useState } from 'react'
 import TextInput from "../features/TextInput"
 
-export default function BasicInfo({value, onChange}) {
+export default function BasicInfo({onNameChange, onEmailChange, onNumberChange, onAddressChange}) {
     return (
         <section className ="basic-info-section">
             <div className="container">
                 <h1>Basic Information</h1>
                 <TextInput
-                    value={value}
-                    onChange={onChange}
+                    onChange={onNameChange}
                     inputID="name"
                     label="Name"
                 />
                 <TextInput
-                    value={value}
-                    onChange={onChange}
+                    onChange={onEmailChange}
                     inputID="email"
                     label="Email"
                 />
                 <TextInput
-                    value={value}
-                    onChange={onChange}
+                    onChange={onNumberChange}
                     inputID="number"
                     label="Phone Number"
                 />
                 <TextInput
-                    value={value}
-                    onChange={onChange}
+                    onChange={onAddressChange}
                     inputID="address"
                     label="Address"
                 />

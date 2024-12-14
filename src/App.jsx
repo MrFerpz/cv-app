@@ -12,21 +12,33 @@ function App() {
      company: "", roleStartDate: "", roleEndDate: "", roleDescription: ""});
 
     function onNameChange(e) {
-      console.log(e.target.value);
       setPerson({...person, name: e.target.value})
+    }
+
+    function onEmailChange(e) {
+      setPerson({...person, email: e.target.value})
+    }
+
+    function onNumberChange(e) {
+      setPerson({...person, number: e.target.value})
+    }
+
+    function onAddressChange(e) {
+      setPerson({...person, address: e.target.value})
     }
 
   return (
     <div className="grid-container">
     <BasicInfo
-      onChange={onNameChange}
-      value={person.name}
-      label="Name"
+      onNameChange={onNameChange}
+      onEmailChange={onEmailChange}
+      onNumberChange={onNumberChange}
+      onAddressChange={onAddressChange}
     />
     <Education/>
     <Experience/>
     <CVApp
-      name={person.name}
+      person={person}
       />
     </div>
   )
