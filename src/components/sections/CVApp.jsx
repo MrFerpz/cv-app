@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
 export default function CVApp({person}) {
+    const separator = {
+        border: "2px solid black",
+        width: "100%"
+    }
 
     return (
         <section className ="cv-section">
@@ -17,6 +21,19 @@ export default function CVApp({person}) {
                 </label>
                 <label label="cv-address">Address:
                     <div className="cv-address">{person.address}</div>
+                </label>
+                <div style={separator}></div>
+                <label label="cv-degree">Degree:
+                    <div className="cv-degree">{person.degree}</div>
+                </label>
+                <label label="cv-university">University:
+                    <div className="cv-university">{person.university}</div>
+                </label>
+                <label label="cv-uni-start-date">Start Date:
+                    <div className="cv-uni-start-date">{person.uniStartDate}</div>
+                </label>
+                <label label="cv-uni-end-date">End Date:
+                    <div className="cv-uni-end-date">{person.uniEndDate}</div>
                 </label>
             </div>
         </section>

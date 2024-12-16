@@ -27,6 +27,22 @@ function App() {
       setPerson({...person, address: e.target.value})
     }
 
+    function onDegreeChange(e) {
+      setPerson({...person, degree: e.target.value})
+    }
+
+    function onUniChange(e) {
+      setPerson({...person, university: e.target.value})
+    }
+
+    function onStartDateChange(e) {
+      setPerson({...person, uniStartDate: e.target.value})
+    }
+
+    function onEndDateChange(e) {
+      setPerson({...person, uniEndDate: e.target.value})
+    }
+
   return (
     <div className="grid-container">
     <BasicInfo
@@ -35,7 +51,12 @@ function App() {
       onNumberChange={onNumberChange}
       onAddressChange={onAddressChange}
     />
-    <Education/>
+    <Education
+      onDegreeChange={onDegreeChange}
+      onUniChange={onUniChange}
+      onStartDateChange={onStartDateChange}
+      onEndDateChange={onEndDateChange}
+    />
     <Experience/>
     <CVApp
       person={person}
