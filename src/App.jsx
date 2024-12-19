@@ -37,6 +37,7 @@ function App() {
 
     function onUniStartDateChange(e) {
       setPerson({...person, uniStartDate: e.target.value})
+      console.log({person})
     }
 
     function onUniEndDateChange(e) {
@@ -74,8 +75,8 @@ function App() {
     <Education
       onDegreeChange={onDegreeChange}
       onUniChange={onUniChange}
-      onStartDateChange={onUniStartDateChange}
-      onEndDateChange={onUniEndDateChange}
+      onUniStartDateChange={onUniStartDateChange}
+      onUniEndDateChange={onUniEndDateChange}
     />
     <Experience
       onRoleChange={onRoleChange}
