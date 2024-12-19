@@ -36,40 +36,37 @@ export default function CVApp({person}) {
                 <div className="cv-education-section">
                     <h2 className="section-title">Education</h2>
                     <div style={separator}></div>
+                    <div className="cv-flex-container">
                         <div>
                             <label label="cv-degree">
                                 <div className="cv-degree">{person.degree}</div>
                             </label>
                         </div>
-                        {/* Current problem here is that the dates don't show here */}
                         <div>
-                            <label label="cv-uni-start-date">
-                                <div className="cv-uni-start-date">{person.uniStartDate}</div>
-                            </label>
-                            <label label="cv-uni-end-date">
-                                <div className="cv-uni-end-date">{person.uniEndDate}</div>
+                            <label label="cv-uni-dates">
+                                <div className="cv-uni-dates">{person.uniStartDate} - {person.uniEndDate}</div>
                             </label>
                         </div>
-                    <label label="cv-university">University:
+                    </div>
+                    <label label="cv-university">
                         <div className="cv-university">{person.university}</div>
                     </label>
                 </div>
                 <div className="cv-experience-section">
                     <h2 className="section-title">Experience</h2>
                     <div style={separator}></div>
-                    <label label="cv-role">Role:
-                        <div className="cv-role">{person.role}</div>
-                    </label>
-                    <label label="cv-company">Company:
+                    <div className="cv-flex-container">
+                        <label label="cv-role">
+                            <div className="cv-role">{person.role}</div>
+                        </label>
+                        <label label="cv-role-dates">
+                            <div className="cv-role-dates">{person.roleStartDate} - {person.roleEndDate}</div>
+                        </label>
+                    </div>
+                    <label label="cv-company">
                         <div className="cv-company">{person.company}</div>
                     </label>
-                    <label label="cv-role-start-date">Start Date:
-                        <div className="cv-role-start-date">{person.roleStartDate}</div>
-                    </label>
-                    <label label="cv-role-end-date">End Date:
-                        <div className="cv-role-end-date">{person.roleEndDate}</div>
-                    </label>
-                    <label label="cv-role-description">Role Description:
+                    <label label="cv-role-description">
                         <div className="cv-role-description">{person.roleDescription}</div>
                     </label>
                 </div>

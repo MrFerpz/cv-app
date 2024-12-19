@@ -158,3 +158,27 @@ label {
   display: flex;
   justify-content: space-between;
 }
+
+.cv-uni-dates, .cv-role-dates {
+  margin-right: 40px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.cv-degree, .cv-role {
+  margin-left: 20px;
+  font-size: larger;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.cv-university, .cv-company {
+  text-align: left;
+  margin: 0 0 10px 20px;
+  color: steelblue;
+}
+
+.cv-role-description {
+  text-align: left;
+  margin-left: 20px;
+}
