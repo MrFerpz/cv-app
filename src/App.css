@@ -160,7 +160,7 @@ label {
 }
 
 .cv-uni-dates, .cv-role-dates {
-  margin-right: 40px;
+  margin-right: 70px;
   font-style: italic;
   margin-top: 10px;
 }
@@ -181,4 +181,20 @@ label {
 .cv-role-description {
   text-align: left;
   margin-left: 20px;
+}
+
+button {
+  background-color: green;
+  box-shadow: inset 2px -2px rgb(0, 0, 0);
+  font: bold;
+  font-size: smaller;
+  position: relative;
+}
+
+.education-submit-button:hover {
+  background-color: darkgreen;
+}
+
+h1 {
+  margin-bottom: 10px
 }
