@@ -1,13 +1,14 @@
 export default function TextInput({onChange, inputID, label}) {
     return (
-        <div>
-                <label label = {label}>{label}<br></br>
-                    <input 
+        <div className = "text-input">
+                <div className = "text-input-label">{label}</div>
+                <label label = {label}>
+                    <input
+                    className = "text-input-box"
                     onChange={onChange}
                     id={inputID}>
                     </input>
                 </label>
-                <br></br>
         </div>
     )
 }

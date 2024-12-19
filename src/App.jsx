@@ -35,12 +35,32 @@ function App() {
       setPerson({...person, university: e.target.value})
     }
 
-    function onStartDateChange(e) {
+    function onUniStartDateChange(e) {
       setPerson({...person, uniStartDate: e.target.value})
     }
 
-    function onEndDateChange(e) {
+    function onUniEndDateChange(e) {
       setPerson({...person, uniEndDate: e.target.value})
+    }
+
+    function onRoleChange(e) {
+      setPerson({...person, role: e.target.value})
+    }
+
+    function onCompanyChange(e) {
+      setPerson({...person, company: e.target.value})
+    }
+
+    function onRoleStartDateChange(e) {
+      setPerson({...person, roleStartDate: e.target.value})
+    }
+
+    function onRoleEndDateChange(e) {
+      setPerson({...person, roleEndDate: e.target.value})
+    }
+
+    function onRoleDescriptionChange(e) {
+      setPerson({...person, roleDescription: e.target.value})
     }
 
   return (
@@ -54,10 +74,16 @@ function App() {
     <Education
       onDegreeChange={onDegreeChange}
       onUniChange={onUniChange}
-      onStartDateChange={onStartDateChange}
-      onEndDateChange={onEndDateChange}
+      onStartDateChange={onUniStartDateChange}
+      onEndDateChange={onUniEndDateChange}
     />
-    <Experience/>
+    <Experience
+      onRoleChange={onRoleChange}
+      onCompanyChange={onCompanyChange}
+      onRoleStartDateChange={onRoleStartDateChange}
+      onRoleEndDateChange={onRoleEndDateChange}
+      onRoleDescriptionChange={onRoleDescriptionChange}
+    />
     <CVApp
       person={person}
       />

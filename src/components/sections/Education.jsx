@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import TextInput from '../features/TextInput'
 
-export default function Education({onDegreeChange, onUniChange, onStartDateChange, onEndDateChange}) {
+export default function Education({onDegreeChange, onUniChange, onUniStartDateChange, onUniEndDateChange}) {
     return (
         <section className ="education-section">
             <div className="container">
@@ -17,12 +17,12 @@ export default function Education({onDegreeChange, onUniChange, onStartDateChang
                     label="University"
                 />
                 <TextInput
-                    onChange={onStartDateChange}
+                    onChange={onUniStartDateChange}
                     inputID="start-date"
                     label="Start Date"
                 />
                 <TextInput
-                    onChange={onEndDateChange}
+                    onChange={onUniEndDateChange}
                     inputID="end-date"
                     label="End Date"
                 />
