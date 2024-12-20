@@ -72,7 +72,12 @@ function App() {
       // assign the details
       degreeDiv.innerHTML= person.degree;
       universityDiv.innerHTML= person.university;
-      uniDatesDiv.innerHTML= `${person.uniStartDate} - ${person.uniEndDate}`
+
+      if ((person.uniStartDate !== "") && (person.uniEndDate !== "")) {
+        uniDatesDiv.innerHTML = `${person.uniStartDate} - ${person.uniEndDate}`
+        } else {
+          uniDatesDiv.innerHTML = ""
+        };
     }
 
     function onBasicInfoSubmit() {
@@ -99,8 +104,13 @@ function App() {
 
       roleDiv.innerHTML = person.role;
       companyDiv.innerHTML = person.company;
-      roleDatesDiv.innerHTML = `${person.roleStartDate} - ${person.roleEndDate}`;
       roleDescriptionDiv.innerHTML = person.roleDescription;
+
+      if ((person.roleStartDate !== "") && (person.roleEndDate !== "")) {
+      roleDatesDiv.innerHTML = `${person.roleStartDate} - ${person.roleEndDate}`
+      } else {
+        roleDatesDiv.innerHTML = ""
+      };
     }
 
     function onBasicInfoClear() {
@@ -112,13 +122,56 @@ function App() {
         $hometown : document.querySelector("#hometown"),
       }
 
-      basicInfoInputs.$name.value = ""
-      basicInfoInputs.$email.value = ""
-      basicInfoInputs.$number.value = ""
-      basicInfoInputs.$hometown.value = ""
+      basicInfoInputs.$name.value = "";
+      basicInfoInputs.$email.value = "";
+      basicInfoInputs.$number.value = "";
+      basicInfoInputs.$hometown.value = "";
 
-      setPerson({...person, name: "", email: "", number: "", address: ""});
+      let newPerson = {...person, name: "", email: "", number: "", address: ""}
+
+      setPerson(newPerson);
       onBasicInfoSubmit();
+    }
+
+    function onExperienceClear() {
+
+      const experienceInputs = {
+        $role : document.querySelector("#role"),
+        $company : document.querySelector("#company"),
+        $roleStartDate : document.querySelector("#role-start-date"),
+        $roleEndDate : document.querySelector("#role-end-date"),
+        $roleDescription : document.querySelector("#role-description")
+      }
+
+      experienceInputs.$role.value = "";
+      experienceInputs.$company.value = "";
+      experienceInputs.$roleStartDate = "";
+      experienceInputs.$roleEndDate = "";
+      experienceInputs.$roleDescription = "";
+
+      let newPerson = {...person, role: "", company: "", roleStartDate: "", roleEndDate: "", roleDescription: ""}
+
+      setPerson(newPerson);
+      onExperienceSubmit();
+    }
+
+    function onEducationClear() {
+      const educationInputs = {
+        $degree : document.querySelector("#degree"),
+        $university : document.querySelector("#university"),
+        $uniStartDate : document.querySelector("#uni-start-date"),
+        $uniEndDate : document.querySelector("#uni-end-date")
+      }
+
+      educationInputs.$degree.value = "";
+      educationInputs.$university.value = "";
+      educationInputs.$uniStartDate = "";
+      educationInputs.$uniEndDate = "";
+
+      let newPerson = {...person, degree: "", university: "", uniStartDate: "", uniEndDate: ""}
+
+      setPerson(newPerson);
+      onEducationSubmit();
     }
 
   return (
@@ -137,6 +190,7 @@ function App() {
       onUniStartDateChange={onUniStartDateChange}
       onUniEndDateChange={onUniEndDateChange}
       onEducationSubmit={onEducationSubmit}
+      onEducationClear={onEducationClear}
     />
     <Experience
       onRoleChange={onRoleChange}
@@ -145,6 +199,7 @@ function App() {
       onRoleEndDateChange={onRoleEndDateChange}
       onRoleDescriptionChange={onRoleDescriptionChange}
       onExperienceSubmit={onExperienceSubmit}
+      onExperienceClear={onExperienceClear}
     />
     <CVApp
       person={person}

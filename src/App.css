@@ -204,7 +204,7 @@ button {
 }
 
 h1 {
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .clear-button {
@@ -216,4 +216,8 @@ svg {
   margin-right: 5px;
   position: relative;
   top: 3px;
+}
+
+#role-description {
+  height: 60px;
 }
