@@ -2,7 +2,7 @@ import { useState } from 'react'
 import TextInput from "../features/TextInput"
 import Button from '../features/Button'
 
-export default function BasicInfo({onNameChange, onEmailChange, onNumberChange, onAddressChange, onBasicInfoSubmit, onBasicInfoEdit}) {
+export default function BasicInfo({onNameChange, onEmailChange, onNumberChange, onAddressChange, onBasicInfoSubmit, onBasicInfoClear}) {
     return (
         <section className ="basic-info-section">
             <div className="container">
@@ -29,11 +29,11 @@ export default function BasicInfo({onNameChange, onEmailChange, onNumberChange, 
                         label="Hometown"
                     />
                     <Button 
-                        onClick={onBasicInfoEdit}
-                        id="basic-info-edit"
-                        label="basic-info-edit"
-                        className="edit-button"
-                        text="EDIT"
+                        onClick={onBasicInfoClear}
+                        id="basic-info-clear"
+                        label="basic-info-clear"
+                        className="clear-button"
+                        text="CLEAR"
                     />
                     <Button
                         onClick={onBasicInfoSubmit}

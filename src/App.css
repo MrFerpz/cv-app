@@ -184,17 +184,36 @@ label {
 }
 
 button {
-  background-color: green;
   box-shadow: inset 2px -2px rgb(0, 0, 0);
-  font: bold;
-  font-size: smaller;
+  font-weight: bolder;
+  font-size: 0.7rem;
   position: relative;
+  margin: 2px;
 }
 
-.education-submit-button:hover {
+.submit-button {
+  background-color: green;
+}
+
+.submit-button:hover {
   background-color: darkgreen;
+}
+
+.clear-button:hover {
+  background-color: rgb(85, 0, 0);
 }
 
 h1 {
   margin-bottom: 10px
+}
+
+.clear-button {
+  background-color: darkred;
+}
+
+svg {
+  color: white;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
 }

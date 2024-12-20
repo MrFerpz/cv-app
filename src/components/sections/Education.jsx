@@ -2,7 +2,7 @@ import { useState } from 'react'
 import TextInput from '../features/TextInput'
 import Button from '../features/Button'
 
-export default function Education({onDegreeChange, onUniChange, onUniStartDateChange, onUniEndDateChange, onEducationSubmit, onEducationEdit}) {
+export default function Education({onDegreeChange, onUniChange, onUniStartDateChange, onUniEndDateChange, onEducationSubmit, onEducationClear}) {
 
     return (
         <section className ="education-section">
@@ -29,17 +29,17 @@ export default function Education({onDegreeChange, onUniChange, onUniStartDateCh
                     label="End Date"
                 />
                 <Button
-                    onClick={onEducationEdit}
-                    id="education-edit"
-                    label="education-edit"
-                    className="education-edit-button"
-                    text="EDIT"
+                    onClick={onEducationClear}
+                    id="education-clear"
+                    label="education-clear"
+                    className="clear-button"
+                    text="CLEAR"
                 />
                 <Button 
                     onClick={onEducationSubmit}
                     id="education-submit"
                     label="education-submit"
-                    className="education-submit-button"
+                    className="submit-button"
                     text="SUBMIT"
                 />
             </div>
